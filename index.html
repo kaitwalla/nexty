@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Nexty</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+        <style>
+            body #auth {
+                display: none;
+            }
+
+            body #list {
+                display: block;
+            }
+
+
+            body.unauthenticated #auth {
+                display: block;
+            }
+
+            body.unauthenticated #list {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="unauthenticated pure-grid">
+        <div class="pure-u-1"></div>
+        <div id="auth" class="pure-u-5-6">
+            <div class="pure-u-1-4"></div>
+            <div class="pure-u-1-2">
+                <p>This tool is designed to make it easier to use NextDNS in the wild. In order to use it, you'll need to copy your API key from the bottom of <a href="https://my.nextdns.io/account" target="_blank">this page</a>. Please note that your API key is only stored on your device and sent to NextDNS during API calls - the author of this tool cannot access it at all.</p>
+
+                <label class="pure-label">Enter your API key
+                    <input type="text" class="pure-input-1" name="apiKey" placeholder="API key" />
+                </label>
+                <button class="pure-u-1 pure-button pure-button-primary">Save key</button>
+            </div>
+            <div class="pure-u-1-4"></div>
+        </div> 
+        <div id="list" class="pure-u-5-6">
+            <select class="pure-input-1-2"></select>
+        </div>
+    </body>
+</html>
